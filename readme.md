@@ -7,8 +7,9 @@
 - [leetcode](https://leetcode-cn.com/?utm_source=LCUS&amp;utm_medium=banner_redirect&amp;utm_campaign=transfer2china)
 - [牛客网]( https://www.nowcoder.com/)（更偏向面试
 
-
 目前主要是在acwing上进行学习。
+
+本人在19年也去参加过[北京大学暑期学校](http://acm.pku.edu.cn/summerschool/pku_acm_train.html)的acm课程，感觉还是挺不错，但是需要有些基础去听才会有更好的效果，在这个项目里也把课件上传了，仅供学习使用。
 
 ## 如何贡献
 
