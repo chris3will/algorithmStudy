@@ -5,7 +5,7 @@
 目前的学习平台主要在一下三个：
 - [acwing]( https://www.acwing.com/)
 - [leetcode](https://leetcode-cn.com/?utm_source=LCUS&amp;utm_medium=banner_redirect&amp;utm_campaign=transfer2china)
-- [牛客网]( https://www.nowcoder.com/)（更偏向面试
+- [牛客网]( https://www.nowcoder.com/)（更偏向面试)
 
 目前主要是在acwing上进行学习。
 
