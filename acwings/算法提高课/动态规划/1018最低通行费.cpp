@@ -26,7 +26,7 @@ int main()
     for(int i=1;i<=n;i++)
         for(int j=1;j<=n;j++)
         {
-            if(i==1&&j==1)f[i][j] = w[i][j];
+            if(i==1&&j==1)f[i][j] = w[i][j];  //特判左上角的数据
             else
             {
                 f[i][j] = INF;  //初始假设是无法到达的,相当于过路费很高
