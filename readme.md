@@ -11,6 +11,8 @@
 
 本人在19年也去参加过[北京大学暑期学校](http://acm.pku.edu.cn/summerschool/pku_acm_train.html)的acm课程，感觉还是挺不错，但是需要有些基础去听才会有更好的效果，在这个项目里也把课件上传了，仅供学习使用。
 
+> 文字测试
+
 ## 如何贡献
 
 非常欢迎你的加入! [提一个Issue](https://github.com/chris3will/algorithmStudy/issues/new) 或者提交一个 Pull Request.
