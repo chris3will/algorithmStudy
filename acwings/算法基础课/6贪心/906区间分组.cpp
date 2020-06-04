@@ -1,3 +1,10 @@
+/*
+ * @Author: Chris Wang
+ * @Date: 2020-03-28 14:30:50
+ * @LastEditors: your name
+ * @LastEditTime: 2020-05-07 08:41:48
+ * @Description: file content
+ */
 //一道借用小根堆的题目
 //用来维护所有组的最右侧端点以起到一种划分的作用
 
