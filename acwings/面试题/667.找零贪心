@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    //找货币，从较大数开始一个一个贪心获取
+    int n;
+    cin>>n;
+    n = 1024 - n;
+    
+    int res = 0;
+    int coins[4] = {64,16,4,1};
+    
+    for(int i=0;i<4;i++)
+    {
+        res += n / coins[i];
+         n%=coins[i];
+    }
+    
+    cout<<res<<endl;
+    
+    
+    
+    return 0;
+}
