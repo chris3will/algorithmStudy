@@ -1,0 +1,54 @@
+#include<iostream>
+#include<algorithm>
+#include<cstring>
+
+using namespace std;
+
+const int N = 510;
+int g[N][N];  //利用邻接矩阵存储稠密图
+int dist[N];  //记录每一个点到第一个点的距离
+bool st[N]; //记录该点的最短距离是否被记录过
+
+int n,m;
+
+int dji()
+{
+    memset(dist,0x3f,sizeof dist);  //最大化初始距离，设置为无穷远便于最近距离的筛选
+    
+    dist[1] = 0;  //第一个点到自己的距离是0
+    
+    //n个点就要进行n次迭代
+    for(int i=0;i<n;i++){
+        int t=-1;  //初始标记
+        for(int j=1;j<=n;j++){
+            //遍历每个点的坐标
+            if(!st[j]&&(t==-1||dist[j]<dist[t]))
+                t=j; 
+        }
+        //已经找到了到目前已确定的点之外到已知点中距离最近的点坐标为t
+        st[t]=true;
+        //以t为核心，更新所有点的坐标
+        for(int j=1;j<=n;j++)
+            dist[j]=min(dist[j],dist[t]+g[t][j]);
+    }
+    
+    if(dist[n]==0x3f3f3f3f)return -1;//不能达到,注意一定要4组3f
+    return dist[n];
+}
+
+int main()
+{
+    cin>>n>>m;
+    memset(g,0x3f,sizeof g);
+    
+    while(m--){
+        int x,y,z;
+        cin>>x>>y>>z;
+        g[x][y] = min(g[x][y],z);  //如果发生重边，则保留最短边即可
+    }
+    
+    cout<<dji()<<endl;
+    
+    
+    return 0;
+}
