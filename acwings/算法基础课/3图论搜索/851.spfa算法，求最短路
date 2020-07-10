@@ -1,0 +1,73 @@
+//spfa算法 只有我更新过了，我才能让别人也更新
+//不断把东西引入一个优先队列中，
+#include<iostream>
+#include<queue>
+#include<cstring>
+#include<algorithm>
+
+using namespace std;
+const int N = 150010;
+typedef pair<int,int> PII;
+int e[N],ne[N],w[N],h[N],idx;
+int n,m;
+int dist[N];
+bool st[N];
+
+void add(int a ,int b,int wei)
+{
+    e[idx] = b,ne[idx]=h[a],w[idx] = wei,h[a]=idx++;
+}
+
+int spfa()
+{
+    memset(dist,0x3f,sizeof dist);
+    dist[1] = 0;
+    queue<int> q; //所有待更新的点
+
+    q.push(1);
+    st[1]  = true;  //存重复的点没有意义
+
+    while(q.size())
+    {
+        int t = q.front();
+        q.pop();
+
+        st[t] = false;  //这个点不在队列，
+        //更新临边
+
+        for(int i=h[t];~i;i=ne[i])
+        {
+            int j = e[i];
+            if(dist[j]>dist[t]+w[i])
+            {
+                dist[j] = dist[t]+w[i];
+                if(!st[j])
+                {
+                    q.push(j);
+                    st[j] = true;
+                }
+            }
+        }
+    }
+    if(dist[n]==0x3f3f3f3f)return -1;
+    else return  dist[n];
+}
+
+
+int main()
+{
+
+    cin>>n>>m;
+    memset(h,-1,sizeof h);
+    int x,y,z;
+    while(m--)
+    {
+
+        scanf("%d%d%d",&x,&y,&z);
+        add(x,y,z);
+    }
+    int t = spfa();
+    if(t==-1)puts("impossible");
+    else printf("%d\n",t);
+    return 0;
+}
